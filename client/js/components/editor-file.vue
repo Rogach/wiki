@@ -519,14 +519,14 @@
           }
         })
       },
-      upload() {
+      upload(e) {
         let self = this
         let curFileAmount = this.files.length
         let uplUrl = (self.mode === 'image') ? '/uploads/img' : '/uploads/file'
 
         $(this.$refs.editorFileUploadInput).simpleUpload(uplUrl, {
-
           name: (self.mode === 'image') ? 'imgfile' : 'binfile',
+          files: e.target.files,
           data: {
             folder: self.currentFolder
           },
