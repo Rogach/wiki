@@ -125,6 +125,7 @@
 		&.is-gapless {
 			padding: 10px;
 			display: flex;
+			overflow: auto;
 		}
 
 		&.modal-loading {
